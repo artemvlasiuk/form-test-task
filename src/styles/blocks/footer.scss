@@ -1,0 +1,15 @@
+.footer {
+  display: none;
+
+  @include onDesktop {
+    display: block;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke-width: 1.6px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.05);
+    font-family: Gilroy;
+    font-size: 130px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}

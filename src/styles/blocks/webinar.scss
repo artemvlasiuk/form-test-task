@@ -1,0 +1,135 @@
+.webinar {
+  display: flex;
+  flex-direction: column;
+
+  @include onDesktop {
+    display: grid;
+    margin-top: 124px;
+    grid-template-areas:
+      "info form"
+      "add form";
+
+    grid-column-gap: 135px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+
+    @include onDesktop {
+      align-items: start;
+      grid-area: info;
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+
+  &__type {
+    width: 89px;
+    height: 24px;
+    border-radius: 3px;
+    background: #4252d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    @include onDesktop {
+      width: 119px;
+      height: 32px;
+      border-radius: 5px;
+    }
+
+    &-text {
+      color: $main-text-color;
+      font-family: Gilroy;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 17.95px;
+
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__title {
+    color: $main-red;
+    font-family: Gilroy;
+    font-size: 53px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    @include onDesktop {
+      font-size: 77px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: $main-text-color;
+    font-family: Gilroy;
+    font-size: 15px;
+    font-weight: 600;
+
+    @include onDesktop {
+      margin-top: 6px;
+      font-size: 22px;
+      gap: 30px;
+      margin-left: 27px;
+    }
+
+    span {
+      position: relative;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-4deg);
+        width: 76px;
+        height: 28px;
+        border-radius: 4px;
+        background-color: $main-red;
+        z-index: -1;
+
+        @include onDesktop {
+          width: 107px;
+          height: 39px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 24px;
+    margin-bottom: 21px;
+    color: $main-text-color;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 148%;
+
+    @include onDesktop {
+      font-size: 18px;
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

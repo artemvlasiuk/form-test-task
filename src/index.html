@@ -1,13 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Powercode Academy</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.2.1/build/css/intlTelInput.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.2.1/build/js/intlTelInput.min.js"></script>
     <script src="scripts/main.js" defer></script>
   </head>
   <body>
-    <h1>Landing Page</h1>
+    <div class="container">
+      <header class="header">
+        <a href="#">
+          <img
+            class="header__logo"
+            src="./images/logo.svg"
+            alt="Logo"
+          />
+        </a>
+        <div class="header__info">
+          <div class="header__info-item">
+            <img
+              class="header__info-icon"
+              src="./images/icons/calendar.svg"
+              alt="Date icon"
+            />
+            <p class="header__info-text">28 декабря</p>
+          </div>
+          <div class="header__info-item">
+            <img
+              class="header__info-icon"
+              src="./images/icons/time.svg"
+              alt="Date icon"
+            />
+            <p class="header__info-text">3,5 часа</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="webinar">
+        <div class="webinar__info">
+          <div class="webinar__type">
+            <img src="./images/icons/globe.svg" alt="Globe icon" />
+            <p class="webinar__type-text">Вебинар</p>
+          </div>
+          <h1 class="webinar__title">front-end</h1>
+          <h2 class="webinar__subtitle">
+            <span>с нуля</span>
+            легкий старт в IT профессии
+          </h2>
+          <p class="webinar__description">
+            Узнайте какими <span>навыками должен обладать фронтенд разработчик в 2022 году</span> и как начать карьеру в востребованной профессии
+          </p>
+        </div>
+
+        <form class="form" id="registrationForm">
+          <h3 class="form__title">
+            Запишитесь <span>бесплатно</span> и получите подарок
+          </h3>
+          <input
+            class="form__input"
+            type="text"
+            id="name"
+            placeholder="Ваше имя и фамилия"
+            required
+          />
+          <input
+            class="form__input"
+            type="tel"
+            id="phone"
+            placeholder="Ваш номер телефона"
+            required
+          />
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            placeholder="Ваш email"
+            required
+          />
+          <button class="form__button" type="submit">Записаться бесплатно</button>
+          <p class="form__policy">
+            Нажимая на кнопку я согашаюсь с
+            <span> политикой конфидециальности</span>
+          </p>
+        </form>
+
+        <div class="additional">
+          <article class="additional__item">
+            <img
+              class="additional__image"
+              src="./images/box.png"
+              alt="Gift picture"
+            />
+            <div class="additional__info">
+              <h4 class="additional__title">Бонус за регистрацию</h4>
+              <p class="additional__description">
+                PDF-файл "5 преимуществ профессии веб-дизайнера"
+              </p>
+            </div>
+          </article>
+          <article class="additional__item">
+            <img
+              class="additional__image"
+              src="./images/avatar.png"
+              alt="Author photo"
+            />
+            <div class="additional__info">
+              <h4 class="additional__title">Кирилл <span>Касатонов</span></h4>
+              <p class="additional__description">
+                6 лет коммерческого опыта с такими компаниями как Mercedes-Benz
+                и другими крупными корпорациями
+              </p>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">front-end developer</footer>
   </body>
 </html>

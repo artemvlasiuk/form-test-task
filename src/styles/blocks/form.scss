@@ -1,0 +1,104 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  background: #303a53;
+  box-shadow: 0px 8.962px 44.809px 0px rgba(40, 127, 165, 0.1);
+  padding: 40px 21px;
+
+  @include onDesktop {
+    grid-area: form;
+    padding: 50px 60px;
+    width: 366px;
+    margin-left: auto;
+  }
+
+  &__title {
+    color: $main-text-color;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.292px;
+    margin-bottom: 18px;
+
+    @include onDesktop {
+      font-size: 22px;
+      line-height: 25.991px;
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: $main-red;
+    }
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #272d3d;
+    padding: 12px 26px;
+    color: $main-text-color;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.508px;
+
+    @include onDesktop {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__input:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__input::placeholder {
+    color: #d7d7d7;
+  }
+
+  &__button {
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #0048ff;
+    width: 222px;
+    height: 46px;
+    text-align: center;
+    color: $main-text-color;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21.508px;
+
+    @include onDesktop {
+      background-color: $main-red;
+      width: 248px;
+      height: 51px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+  &__policy {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 149%;
+
+    @include onDesktop {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    span {
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+  }
+}

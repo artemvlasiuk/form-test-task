@@ -1,0 +1,40 @@
+.additional {
+  padding: 36px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  @include onDesktop {
+    grid-area: add;
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__image {
+    width: 46px;
+    height: 46px;
+  }
+
+  &__title {
+    color: $main-text-color;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 148%;
+  }
+
+  &__description {
+    color: $main-text-color;
+    font-family: Gilroy;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 148%;
+  }
+}

@@ -1,3 +1,36 @@
+@import "./utils/reset.scss";
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+@import "./utils/fonts.scss";
+
+@import "./blocks/header.scss";
+@import "./blocks/webinar.scss";
+@import "./blocks/form.scss";
+@import "./blocks/additional.scss";
+@import "./blocks/footer.scss";
+
 body {
-  margin: 0;
+  min-height: 100vh;
+  background-image: url("../images/bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include onDesktop {
+    background-image: url("../images/bg-desktop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.container {
+  @include contentPaddingInline;
+}
+
+.iti__tel-input {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.iti {
+  margin-bottom: 14px;
 }
