@@ -16,18 +16,18 @@ document
     const email = document.getElementById("email").value.trim();
 
     if (!name || !phone || !email) {
-      alert("Будь ласка, заповніть всі поля.");
+      alert("Please fill in all fields.");
       return;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      alert("Будь ласка, введіть правильний email.");
+      alert("Please enter a valid email.");
       return;
     }
 
     if (!iti.isValidNumber()) {
-      alert("Будь ласка, введіть правильний номер телефону.");
+      alert("Please enter a valid phone number.");
       return;
     }
 
@@ -55,13 +55,13 @@ document
       .then((response) => response.json())
       .then((data) => {
         if (data.ok) {
-          alert("Дані успішно надіслані!");
+          alert("Data sent successfully!");
         } else {
           throw new Error(data.description);
         }
       })
       .catch((error) => {
-        console.error("Помилка:", error);
-        alert("Сталася помилка при відправці даних.");
+        console.error("Error:", error);
+        alert("An error occurred while sending data.");
       });
   });
